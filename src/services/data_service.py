@@ -10,7 +10,7 @@ def get_products() -> List[Product]:
 
 
 def get_product(name: str) -> Product:
-    product = Product.objects(name=name).first()
+    product = Product.objects(name__iexact=name).first()
     return product
 
 
